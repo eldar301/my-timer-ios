@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78028DB72027221F00E51D30 /* SaverSchedulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78028DB62027221F00E51D30 /* SaverSchedulePresenter.swift */; };
+		78028DBA2027221F00E51D30 /* PreparingScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78028DB92027221F00E51D30 /* PreparingScheduleViewController.swift */; };
+		78028DBC2027221F00E51D30 /* TimerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78028DBB2027221F00E51D30 /* TimerService.swift */; };
+		78028DBE2027272600E51D30 /* SoundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78028DBD2027272600E51D30 /* SoundService.swift */; };
+		780F71A1202386CA0068BCD9 /* TimerPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F71A0202386CA0068BCD9 /* TimerPickerViewController.swift */; };
+		780F71A62023949D0068BCD9 /* TimerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780F71A42023949D0068BCD9 /* TimerCollectionViewCell.swift */; };
+		780F71A72023949D0068BCD9 /* TimerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 780F71A52023949D0068BCD9 /* TimerCollectionViewCell.xib */; };
+		78521FB820242C550038FBE9 /* FavoriteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521FB720242C550038FBE9 /* FavoriteCollectionViewController.swift */; };
+		78521FBB20242D220038FBE9 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521FB920242D220038FBE9 /* FavoriteCollectionViewCell.swift */; };
+		78521FBC20242D220038FBE9 /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78521FBA20242D220038FBE9 /* FavoriteCollectionViewCell.xib */; };
+		7868637220236C3B00FC7556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868637120236C3B00FC7556 /* AppDelegate.swift */; };
+		7868637420236C3B00FC7556 /* TimerCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868637320236C3B00FC7556 /* TimerCreatorViewController.swift */; };
+		7868637720236C3B00FC7556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7868637520236C3B00FC7556 /* Main.storyboard */; };
+		7868637920236C3B00FC7556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7868637820236C3B00FC7556 /* Assets.xcassets */; };
+		7868637C20236C3B00FC7556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7868637A20236C3B00FC7556 /* LaunchScreen.storyboard */; };
+		7868638520236C3B00FC7556 /* TimerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868638420236C3B00FC7556 /* TimerCollectionViewController.swift */; };
+		78F67F1B20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F67F1A20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift */; };
+		78F67F1D20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F67F1C20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift */; };
+		78F67F212026150800FF87D5 /* HeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F67F1F2026150800FF87D5 /* HeaderCollectionView.xib */; };
+		78F67F272026156600FF87D5 /* FooterCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F67F252026156600FF87D5 /* FooterCollectionView.xib */; };
+		78F70C922025D6AC00C01B38 /* TimerPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F70C912025D6AC00C01B38 /* TimerPickerPresenter.swift */; };
+		78F70C942025F78100C01B38 /* RunningSchedulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F70C932025F78100C01B38 /* RunningSchedulePresenter.swift */; };
+		78F8808220246EA90058005B /* PresenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8808120246EA90058005B /* PresenterManager.swift */; };
+		78F8808420246F1F0058005B /* FavoriteSchedulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8808320246F1F0058005B /* FavoriteSchedulePresenter.swift */; };
+		78F8808620246F4A0058005B /* EditingSchedulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F8808520246F4A0058005B /* EditingSchedulePresenter.swift */; };
+		78F8808A202470560058005B /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F88089202470560058005B /* Schedule.swift */; };
+		78FDA61B2026295B0069E23C /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78FDA61A2026295B0069E23C /* ScheduleService.swift */; };
+		96EF2E30305A7C997ECD2C70 /* Pods_MyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2DB9CEC3B51A689028A12DC /* Pods_MyTimer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		12604C44BC35157BAC59B6AE /* Pods-MyTimer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTimer.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyTimer/Pods-MyTimer.release.xcconfig"; sourceTree = "<group>"; };
+		78028DB62027221F00E51D30 /* SaverSchedulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaverSchedulePresenter.swift; sourceTree = "<group>"; };
+		78028DB92027221F00E51D30 /* PreparingScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreparingScheduleViewController.swift; sourceTree = "<group>"; };
+		78028DBB2027221F00E51D30 /* TimerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerService.swift; sourceTree = "<group>"; };
+		78028DBD2027272600E51D30 /* SoundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundService.swift; sourceTree = "<group>"; };
+		780F71A0202386CA0068BCD9 /* TimerPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerViewController.swift; sourceTree = "<group>"; };
+		780F71A42023949D0068BCD9 /* TimerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewCell.swift; sourceTree = "<group>"; };
+		780F71A52023949D0068BCD9 /* TimerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimerCollectionViewCell.xib; sourceTree = "<group>"; };
+		78521FB720242C550038FBE9 /* FavoriteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewController.swift; sourceTree = "<group>"; };
+		78521FB920242D220038FBE9 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
+		78521FBA20242D220038FBE9 /* FavoriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		7868636E20236C3B00FC7556 /* MyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7868637120236C3B00FC7556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7868637320236C3B00FC7556 /* TimerCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCreatorViewController.swift; sourceTree = "<group>"; };
+		7868637620236C3B00FC7556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7868637820236C3B00FC7556 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7868637B20236C3B00FC7556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7868637D20236C3B00FC7556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7868638420236C3B00FC7556 /* TimerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewController.swift; sourceTree = "<group>"; };
+		78F67F1A20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingScheduleCollectionViewController.swift; sourceTree = "<group>"; };
+		78F67F1C20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningScheduleCollectionViewController.swift; sourceTree = "<group>"; };
+		78F67F1F2026150800FF87D5 /* HeaderCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionView.xib; sourceTree = "<group>"; };
+		78F67F252026156600FF87D5 /* FooterCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterCollectionView.xib; sourceTree = "<group>"; };
+		78F70C912025D6AC00C01B38 /* TimerPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerPresenter.swift; sourceTree = "<group>"; };
+		78F70C932025F78100C01B38 /* RunningSchedulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningSchedulePresenter.swift; sourceTree = "<group>"; };
+		78F8808120246EA90058005B /* PresenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterManager.swift; sourceTree = "<group>"; };
+		78F8808320246F1F0058005B /* FavoriteSchedulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSchedulePresenter.swift; sourceTree = "<group>"; };
+		78F8808520246F4A0058005B /* EditingSchedulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingSchedulePresenter.swift; sourceTree = "<group>"; };
+		78F88089202470560058005B /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Schedule.swift; path = MyTimer/Schedule.swift; sourceTree = SOURCE_ROOT; };
+		78FDA61A2026295B0069E23C /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		C2DB9CEC3B51A689028A12DC /* Pods_MyTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE0D51BFC13B933789F4761 /* Pods-MyTimer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyTimer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyTimer/Pods-MyTimer.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7868636B20236C3B00FC7556 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96EF2E30305A7C997ECD2C70 /* Pods_MyTimer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78028DB82027221F00E51D30 /* PreparingScheduleView */ = {
+			isa = PBXGroup;
+			children = (
+				78028DB92027221F00E51D30 /* PreparingScheduleViewController.swift */,
+			);
+			path = PreparingScheduleView;
+			sourceTree = "<group>";
+		};
+		780F71A9202396F20068BCD9 /* ScheduleCollection */ = {
+			isa = PBXGroup;
+			children = (
+				78F67F1C20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift */,
+				78F67F1A20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift */,
+				7868638420236C3B00FC7556 /* TimerCollectionViewController.swift */,
+				780F71A42023949D0068BCD9 /* TimerCollectionViewCell.swift */,
+				780F71A52023949D0068BCD9 /* TimerCollectionViewCell.xib */,
+				78F67F1F2026150800FF87D5 /* HeaderCollectionView.xib */,
+				78F67F252026156600FF87D5 /* FooterCollectionView.xib */,
+			);
+			path = ScheduleCollection;
+			sourceTree = "<group>";
+		};
+		780F71AA202397050068BCD9 /* TimerPicker */ = {
+			isa = PBXGroup;
+			children = (
+				780F71A0202386CA0068BCD9 /* TimerPickerViewController.swift */,
+			);
+			path = TimerPicker;
+			sourceTree = "<group>";
+		};
+		78521FB520242C1E0038FBE9 /* TimerCreatorView */ = {
+			isa = PBXGroup;
+			children = (
+				7868637320236C3B00FC7556 /* TimerCreatorViewController.swift */,
+			);
+			path = TimerCreatorView;
+			sourceTree = "<group>";
+		};
+		78521FB620242C390038FBE9 /* FavoriteScheduleCollection */ = {
+			isa = PBXGroup;
+			children = (
+				78521FB720242C550038FBE9 /* FavoriteCollectionViewController.swift */,
+				78521FB920242D220038FBE9 /* FavoriteCollectionViewCell.swift */,
+				78521FBA20242D220038FBE9 /* FavoriteCollectionViewCell.xib */,
+			);
+			path = FavoriteScheduleCollection;
+			sourceTree = "<group>";
+		};
+		7868636520236C3A00FC7556 = {
+			isa = PBXGroup;
+			children = (
+				7868637020236C3B00FC7556 /* MyTimer */,
+				7868636F20236C3B00FC7556 /* Products */,
+				C3B2D44EC6F15CF998958A84 /* Pods */,
+				CFFAECAFACA3D99C2F1C401A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7868636F20236C3B00FC7556 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7868636E20236C3B00FC7556 /* MyTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7868637020236C3B00FC7556 /* MyTimer */ = {
+			isa = PBXGroup;
+			children = (
+				78F88088202470470058005B /* Service */,
+				78F880872024703F0058005B /* Model */,
+				78F8808020246E6F0058005B /* Presenters */,
+				78F8807F20246E4C0058005B /* Views */,
+				7868638320236C3B00FC7556 /* Supporting Files */,
+				7868637D20236C3B00FC7556 /* Info.plist */,
+			);
+			path = MyTimer;
+			sourceTree = "<group>";
+		};
+		7868638320236C3B00FC7556 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7868637120236C3B00FC7556 /* AppDelegate.swift */,
+				7868637820236C3B00FC7556 /* Assets.xcassets */,
+				7868637A20236C3B00FC7556 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		78F8807F20246E4C0058005B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78028DB82027221F00E51D30 /* PreparingScheduleView */,
+				78521FB520242C1E0038FBE9 /* TimerCreatorView */,
+				78521FB620242C390038FBE9 /* FavoriteScheduleCollection */,
+				780F71AA202397050068BCD9 /* TimerPicker */,
+				780F71A9202396F20068BCD9 /* ScheduleCollection */,
+				7868637520236C3B00FC7556 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		78F8808020246E6F0058005B /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				78F8808120246EA90058005B /* PresenterManager.swift */,
+				78F8808520246F4A0058005B /* EditingSchedulePresenter.swift */,
+				78F70C932025F78100C01B38 /* RunningSchedulePresenter.swift */,
+				78F8808320246F1F0058005B /* FavoriteSchedulePresenter.swift */,
+				78F70C912025D6AC00C01B38 /* TimerPickerPresenter.swift */,
+				78028DB62027221F00E51D30 /* SaverSchedulePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		78F880872024703F0058005B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				78F88089202470560058005B /* Schedule.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		78F88088202470470058005B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				78FDA61A2026295B0069E23C /* ScheduleService.swift */,
+				78028DBB2027221F00E51D30 /* TimerService.swift */,
+				78028DBD2027272600E51D30 /* SoundService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C3B2D44EC6F15CF998958A84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAE0D51BFC13B933789F4761 /* Pods-MyTimer.debug.xcconfig */,
+				12604C44BC35157BAC59B6AE /* Pods-MyTimer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CFFAECAFACA3D99C2F1C401A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2DB9CEC3B51A689028A12DC /* Pods_MyTimer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7868636D20236C3B00FC7556 /* MyTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7868638020236C3B00FC7556 /* Build configuration list for PBXNativeTarget "MyTimer" */;
+			buildPhases = (
+				62C423909FDD08BF626A0EC8 /* [CP] Check Pods Manifest.lock */,
+				7868636A20236C3B00FC7556 /* Sources */,
+				7868636B20236C3B00FC7556 /* Frameworks */,
+				7868636C20236C3B00FC7556 /* Resources */,
+				74A2C26536BD3C841FD41895 /* [CP] Embed Pods Frameworks */,
+				1914780C72AED12002CF875B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyTimer;
+			productName = MyTimer;
+			productReference = 7868636E20236C3B00FC7556 /* MyTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7868636620236C3A00FC7556 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Eldar Goloviznin";
+				TargetAttributes = {
+					7868636D20236C3B00FC7556 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 7868636920236C3A00FC7556 /* Build configuration list for PBXProject "MyTimer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7868636520236C3A00FC7556;
+			productRefGroup = 7868636F20236C3B00FC7556 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7868636D20236C3B00FC7556 /* MyTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7868636C20236C3B00FC7556 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				780F71A72023949D0068BCD9 /* TimerCollectionViewCell.xib in Resources */,
+				78F67F212026150800FF87D5 /* HeaderCollectionView.xib in Resources */,
+				7868637C20236C3B00FC7556 /* LaunchScreen.storyboard in Resources */,
+				7868637920236C3B00FC7556 /* Assets.xcassets in Resources */,
+				7868637720236C3B00FC7556 /* Main.storyboard in Resources */,
+				78F67F272026156600FF87D5 /* FooterCollectionView.xib in Resources */,
+				78521FBC20242D220038FBE9 /* FavoriteCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1914780C72AED12002CF875B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTimer/Pods-MyTimer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62C423909FDD08BF626A0EC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyTimer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74A2C26536BD3C841FD41895 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MyTimer/Pods-MyTimer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyTimer/Pods-MyTimer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7868636A20236C3B00FC7556 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78028DBC2027221F00E51D30 /* TimerService.swift in Sources */,
+				780F71A62023949D0068BCD9 /* TimerCollectionViewCell.swift in Sources */,
+				78F8808220246EA90058005B /* PresenterManager.swift in Sources */,
+				780F71A1202386CA0068BCD9 /* TimerPickerViewController.swift in Sources */,
+				78F67F1D20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift in Sources */,
+				78028DB72027221F00E51D30 /* SaverSchedulePresenter.swift in Sources */,
+				7868638520236C3B00FC7556 /* TimerCollectionViewController.swift in Sources */,
+				78F67F1B20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift in Sources */,
+				78F70C922025D6AC00C01B38 /* TimerPickerPresenter.swift in Sources */,
+				7868637420236C3B00FC7556 /* TimerCreatorViewController.swift in Sources */,
+				78521FBB20242D220038FBE9 /* FavoriteCollectionViewCell.swift in Sources */,
+				78028DBE2027272600E51D30 /* SoundService.swift in Sources */,
+				78F8808420246F1F0058005B /* FavoriteSchedulePresenter.swift in Sources */,
+				78028DBA2027221F00E51D30 /* PreparingScheduleViewController.swift in Sources */,
+				78F8808620246F4A0058005B /* EditingSchedulePresenter.swift in Sources */,
+				78521FB820242C550038FBE9 /* FavoriteCollectionViewController.swift in Sources */,
+				78F8808A202470560058005B /* Schedule.swift in Sources */,
+				7868637220236C3B00FC7556 /* AppDelegate.swift in Sources */,
+				78FDA61B2026295B0069E23C /* ScheduleService.swift in Sources */,
+				78F70C942025F78100C01B38 /* RunningSchedulePresenter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7868637520236C3B00FC7556 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7868637620236C3B00FC7556 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7868637A20236C3B00FC7556 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7868637B20236C3B00FC7556 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7868637E20236C3B00FC7556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7868637F20236C3B00FC7556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7868638120236C3B00FC7556 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAE0D51BFC13B933789F4761 /* Pods-MyTimer.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JD6X7BWBF5;
+				INFOPLIST_FILE = MyTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goloviznineldar.MyTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7868638220236C3B00FC7556 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12604C44BC35157BAC59B6AE /* Pods-MyTimer.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JD6X7BWBF5;
+				INFOPLIST_FILE = MyTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.goloviznineldar.MyTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7868636920236C3A00FC7556 /* Build configuration list for PBXProject "MyTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7868637E20236C3B00FC7556 /* Debug */,
+				7868637F20236C3B00FC7556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7868638020236C3B00FC7556 /* Build configuration list for PBXNativeTarget "MyTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7868638120236C3B00FC7556 /* Debug */,
+				7868638220236C3B00FC7556 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7868636620236C3A00FC7556 /* Project object */;
+}
