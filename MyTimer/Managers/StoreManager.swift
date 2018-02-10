@@ -27,7 +27,7 @@ class StoreManager {
     }
     
     static func requestReview() {
-        if launchesCount >= 5 {
+        if launchesCount >= 5 && launchesCount % 2 == 0 {
             SKStoreReviewController.requestReview()
         }
     }
