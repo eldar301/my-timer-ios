@@ -19,6 +19,8 @@ class TimerCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView?.setCollectionViewLayout(TimerFlowLayout(), animated: true)
+        
         collectionView?.register(UINib(nibName: "TimerCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellReuseIdentifier)
         collectionView?.register(UINib(nibName: "HeaderCollectionView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerReuseIdentifier)
         collectionView?.register(UINib(nibName: "FooterCollectionView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionFooter, withReuseIdentifier: footerReuseIdentifier)
@@ -69,6 +71,7 @@ extension TimerCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let fillScreenWidth = collectionView.frame.width
-        return CGSize(width: fillScreenWidth, height: 50)
+        return CGSize(width: fillScreenWidth, height: 40)
     }
+
 }

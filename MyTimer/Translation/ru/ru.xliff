@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="MyTimer/Info.plist" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.0" build-num="9A235"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName">
+        <source>$(PRODUCT_NAME)</source>
+        <target>Мой Таймер</target>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="MyTimer/Localizable.strings" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.0" build-num="9A235"/>
+    </header>
+    <body>
+      <trans-unit id="Cancel">
+        <source>Cancel</source>
+        <target>Отмена</target>
+        <note>PreparingScheduleViewController</note>
+      </trans-unit>
+      <trans-unit id="Enter the title">
+        <source>Enter the title</source>
+        <target>Введите название</target>
+        <note>PreparingScheduleViewController</note>
+      </trans-unit>
+      <trans-unit id="How would you name it">
+        <source>How would you name it</source>
+        <target>Назовите таймер</target>
+        <note>PreparingScheduleViewController</note>
+      </trans-unit>
+      <trans-unit id="Save">
+        <source>Save</source>
+        <target>Сохранить</target>
+        <note>PreparingScheduleViewController</note>
+      </trans-unit>
+      <trans-unit id="Save timer">
+        <source>Save timer</source>
+        <target>Сохранить таймер</target>
+        <note>PreparingScheduleViewController</note>
+      </trans-unit>
+      <trans-unit id="Start">
+        <source>Start</source>
+        <target>Старт</target>
+        <note>PreparingScheduleViewController</note>
+      </trans-unit>
+      <trans-unit id="Stop">
+        <source>Stop</source>
+        <target>Стоп</target>
+        <note>PreparingScheduleViewController</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="MyTimer/Supporting Files/Base.lproj/LaunchScreen.storyboard" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.0" build-num="9A235"/>
+    </header>
+    <body/>
+  </file>
+  <file original="MyTimer/Views/Base.lproj/Main.storyboard" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.0" build-num="9A235"/>
+    </header>
+    <body>
+      <trans-unit id="1qx-cu-iLP.title">
+        <source>My Timer</source>
+        <target>Мой Таймер</target>
+        <note>Class = "UINavigationItem"; title = "My Timer"; ObjectID = "1qx-cu-iLP";</note>
+      </trans-unit>
+      <trans-unit id="LSo-fq-icB.title">
+        <source>Favorites</source>
+        <target>Избранное</target>
+        <note>Class = "UITabBarItem"; title = "Favorites"; ObjectID = "LSo-fq-icB";</note>
+      </trans-unit>
+      <trans-unit id="N0x-NR-9Z3.normalTitle">
+        <source>Start</source>
+        <target>Старт</target>
+        <note>Class = "UIButton"; normalTitle = "Start"; ObjectID = "N0x-NR-9Z3";</note>
+      </trans-unit>
+      <trans-unit id="WBX-pc-EDB.title">
+        <source>My Timer</source>
+        <target>Мой Таймер</target>
+        <note>Class = "UINavigationItem"; title = "My Timer"; ObjectID = "WBX-pc-EDB";</note>
+      </trans-unit>
+      <trans-unit id="WJs-Im-2kH.title">
+        <source>Add timer</source>
+        <target>Добавить таймер</target>
+        <note>Class = "UITabBarItem"; title = "Add timer"; ObjectID = "WJs-Im-2kH";</note>
+      </trans-unit>
+      <trans-unit id="hqN-hk-QXy.text">
+        <source>:</source>
+        <target>:</target>
+        <note>Class = "UILabel"; text = ":"; ObjectID = "hqN-hk-QXy";</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

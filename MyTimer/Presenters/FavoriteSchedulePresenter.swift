@@ -28,6 +28,10 @@ class FavoriteSchedulePresenterDefault: FavoriteSchedulePresenter {
     var schedules: [String] = []
     
     func onViewDidAppear() {
+        prepareForShow()
+    }
+    
+    private func prepareForShow() {
         PresenterManager.instance.editingSchedulePresenter.editable = false
         schedules = ScheduleService.instance.scheduleTitles()
         favoriteScheduleView?.forceUpdate()

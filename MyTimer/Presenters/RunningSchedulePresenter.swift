@@ -12,6 +12,7 @@ protocol RunningScheduleView: class {
     func forceUpdate()
     func deleteTimer(atIndex: Int)
     func change(timer: Timer, atIndex: Int)
+    func finish()
 }
 
 protocol RunningSchedulePresenter: class {
@@ -38,9 +39,7 @@ class RunningSchedulePresenterDefault: RunningSchedulePresenter {
     private var schedule: Schedule!
     
     func onViewDidLoad() {
-        schedule = ScheduleService.instance.safeCopyActualSchedule
-        runningScheduleView?.forceUpdate()
-        timerService.callback = self
+        reloadSchedule()
     }
     
     func viewDidDisappear() {
@@ -52,13 +51,21 @@ class RunningSchedulePresenterDefault: RunningSchedulePresenter {
         if let firstTimer = schedule.timers.first, !running {
             running = true
             soundService.doSound()
+            timerService.callback = self
             timerService.run(withTimer: firstTimer)
+        } else {
+            runningScheduleView?.finish()
         }
     }
     
     func onStopPressed() {
         running = false
+        timerService.callback = nil
         timerService.stop()
+        reloadSchedule()
+    }
+    
+    private func reloadSchedule() {
         schedule = ScheduleService.instance.safeCopyActualSchedule
         runningScheduleView?.forceUpdate()
     }
@@ -79,6 +86,9 @@ extension RunningSchedulePresenterDefault: TimerServiceCallback {
             timerService.run(withTimer: nextTimer)
         } else {
             running = false
+            timerService.callback = nil
+            runningScheduleView?.finish()
+            reloadSchedule()
         }
     }
     

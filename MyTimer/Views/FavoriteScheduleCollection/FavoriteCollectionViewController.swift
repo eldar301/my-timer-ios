@@ -20,13 +20,13 @@ class FavoriteCollectionViewController: UICollectionViewController {
         
         let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeGesture))
         swipeGestureRecognizer.direction = .down
-        self.collectionView?.addGestureRecognizer(swipeGestureRecognizer)
+        self.collectionView!.addGestureRecognizer(swipeGestureRecognizer)
 
         self.collectionView!.register(UINib(nibName: "FavoriteCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
-        if let tabBarHeight = tabBarController?.tabBar.frame.height {
-            let tabBarInsets = UIEdgeInsetsMake(0, 0, tabBarHeight, 0)
-            collectionView?.contentInset = tabBarInsets
-        }
+        
+        // Page Control
+        let insetsForPageController = UIEdgeInsets(top: 0, left: 0, bottom: 25, right: 0)
+        self.collectionView!.contentInset = insetsForPageController
         
         presenter.favoriteScheduleView = self
     }
@@ -97,7 +97,7 @@ extension FavoriteCollectionViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemHeight = collectionView.contentSize.height
-        return CGSize(width: itemHeight, height: itemHeight)
+        return CGSize(width: itemHeight * 2, height: itemHeight)
     }
     
 }

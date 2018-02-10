@@ -8,18 +8,18 @@
 
 import UIKit
 
-class TimerCreatorViewController: UIViewController {
+class TimerCreatorViewController: ViewControllerWithAutoAdjustingBackgroundViewToTopOfStatusBar {
     
-}
-
-private extension TimerCreatorViewController {
+    @IBOutlet weak var backgroundTopConstraint: NSLayoutConstraint!
     
-    func childViewController<T: UIViewController>(withType _: T.Type) -> T? {
-        for childVC in self.childViewControllers where childVC is T {
-            return childVC as? T
+    override func viewDidLoad() {
+        self.backgroundViewToTopConstraint = backgroundTopConstraint
+        super.viewDidLoad()
+        
+        if #available(iOS 10.3, *) {
+            StoreManager.requestReview()
         }
-        return nil
     }
-
+    
 }
 

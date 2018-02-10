@@ -8,14 +8,29 @@
 
 import UIKit
 
-class PreparingScheduleViewController: UIViewController {
+class PreparingScheduleViewController: ViewControllerWithAutoAdjustingBackgroundViewToTopOfStatusBar {
 
+    @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var backgroundTopConstraints: NSLayoutConstraint!
+    
     var presenter = PresenterManager.instance.saverPresenter
     
-    @IBAction func addToFavoritesPressed() {
-        let alert = UIAlertController(title: "Save timer", message: "How would you name it", preferredStyle: .alert)
+    override func viewDidLoad() {
+        self.backgroundViewToTopConstraint = backgroundTopConstraints
         
-        let enterTitleAction = UIAlertAction(title: "Save", style: .default) { (_) in
+        super.viewDidLoad()
+    }
+    
+    let alertTitle = NSLocalizedString("Save timer", comment: "PreparingScheduleViewController")
+    let alertMessage = NSLocalizedString("How would you name it", comment: "PreparingScheduleViewController")
+    let alertEnterTitleAction = NSLocalizedString("Save", comment: "PreparingScheduleViewController")
+    let alertEnterTitleTextFieldPlaceholder = NSLocalizedString("Enter the title", comment: "PreparingScheduleViewController")
+    let alertCancelAction = NSLocalizedString("Cancel", comment: "PreparingScheduleViewController")
+    
+    @IBAction func addToFavoritesPressed() {
+        let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
+        
+        let enterTitleAction = UIAlertAction(title: alertEnterTitleAction, style: .default) { (_) in
             let textField = alert.textFields![0]
             self.presenter.save(withTitle: textField.text!)
         }
@@ -23,28 +38,32 @@ class PreparingScheduleViewController: UIViewController {
         alert.addAction(enterTitleAction)
         
         alert.addTextField { (textField) in
-            textField.placeholder = "Enter the title"
+            textField.placeholder = self.alertEnterTitleTextFieldPlaceholder
             NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextFieldTextDidChange, object: textField, queue: OperationQueue.main, using: { (_) in
                 enterTitleAction.isEnabled = textField.text != ""
             })
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: alertCancelAction, style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         
         self.present(alert, animated: true, completion: nil)
     }
     
-    let startString = NSAttributedString(string: "Start")
-    let stopString = NSAttributedString(string: "Stop")
+    private let startString = NSLocalizedString("Start", comment: "PreparingScheduleViewController")
+    private let stopString = NSLocalizedString("Stop", comment: "PreparingScheduleViewController")
     
     @IBAction func startStopPressed(_ sender: UIButton) {
-        if sender.attributedTitle(for: .normal) == startString {
+        if sender.titleLabel?.text == startString {
+            sender.setTitle(stopString, for: .normal)
             PresenterManager.instance.runningSchedulePresenter.onStartPressed()
-            sender.setAttributedTitle(stopString, for: .normal)
         } else {
+            sender.setTitle(startString, for: .normal)
             PresenterManager.instance.runningSchedulePresenter.onStopPressed()
-            sender.setAttributedTitle(startString, for: .normal)
         }
+    }
+    
+    func setStartTitle() {
+        startStopButton.setTitle(startString, for: .normal)
     }
 }

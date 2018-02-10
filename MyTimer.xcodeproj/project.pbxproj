@@ -17,12 +17,20 @@
 		78521FB820242C550038FBE9 /* FavoriteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521FB720242C550038FBE9 /* FavoriteCollectionViewController.swift */; };
 		78521FBB20242D220038FBE9 /* FavoriteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78521FB920242D220038FBE9 /* FavoriteCollectionViewCell.swift */; };
 		78521FBC20242D220038FBE9 /* FavoriteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78521FBA20242D220038FBE9 /* FavoriteCollectionViewCell.xib */; };
+		7860DD2B2029A50A0078C52A /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860DD2A2029A50A0078C52A /* TransparentNavigationController.swift */; };
+		7860DD2D2029A80A0078C52A /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860DD2C2029A80A0078C52A /* CustomPageViewController.swift */; };
+		7860DD312029B0120078C52A /* RoundEdgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860DD302029B0120078C52A /* RoundEdgeView.swift */; };
+		7860DD332029F2310078C52A /* ViewControllerWithAutoAdjustingBackgroundViewToTopOfStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7860DD322029F2310078C52A /* ViewControllerWithAutoAdjustingBackgroundViewToTopOfStatusBar.swift */; };
 		7868637220236C3B00FC7556 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868637120236C3B00FC7556 /* AppDelegate.swift */; };
 		7868637420236C3B00FC7556 /* TimerCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868637320236C3B00FC7556 /* TimerCreatorViewController.swift */; };
 		7868637720236C3B00FC7556 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7868637520236C3B00FC7556 /* Main.storyboard */; };
 		7868637920236C3B00FC7556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7868637820236C3B00FC7556 /* Assets.xcassets */; };
 		7868637C20236C3B00FC7556 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7868637A20236C3B00FC7556 /* LaunchScreen.storyboard */; };
 		7868638520236C3B00FC7556 /* TimerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7868638420236C3B00FC7556 /* TimerCollectionViewController.swift */; };
+		7880FD6F202EC2E500B75473 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880FD6E202EC2E500B75473 /* StoreManager.swift */; };
+		7880FD71202EDD3A00B75473 /* TimerFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880FD70202EDD3A00B75473 /* TimerFlowLayout.swift */; };
+		78A16F4E202EEE1A0025F547 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A16F50202EEE1A0025F547 /* InfoPlist.strings */; };
+		78A16F53202EEE1C0025F547 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 78A16F55202EEE1C0025F547 /* Localizable.strings */; };
 		78F67F1B20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F67F1A20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift */; };
 		78F67F1D20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F67F1C20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift */; };
 		78F67F212026150800FF87D5 /* HeaderCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F67F1F2026150800FF87D5 /* HeaderCollectionView.xib */; };
@@ -49,6 +57,10 @@
 		78521FB720242C550038FBE9 /* FavoriteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewController.swift; sourceTree = "<group>"; };
 		78521FB920242D220038FBE9 /* FavoriteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewCell.swift; sourceTree = "<group>"; };
 		78521FBA20242D220038FBE9 /* FavoriteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewCell.xib; sourceTree = "<group>"; };
+		7860DD2A2029A50A0078C52A /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
+		7860DD2C2029A80A0078C52A /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		7860DD302029B0120078C52A /* RoundEdgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundEdgeView.swift; sourceTree = "<group>"; };
+		7860DD322029F2310078C52A /* ViewControllerWithAutoAdjustingBackgroundViewToTopOfStatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWithAutoAdjustingBackgroundViewToTopOfStatusBar.swift; sourceTree = "<group>"; };
 		7868636E20236C3B00FC7556 /* MyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7868637120236C3B00FC7556 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7868637320236C3B00FC7556 /* TimerCreatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCreatorViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +69,12 @@
 		7868637B20236C3B00FC7556 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7868637D20236C3B00FC7556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7868638420236C3B00FC7556 /* TimerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCollectionViewController.swift; sourceTree = "<group>"; };
+		7880FD6E202EC2E500B75473 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		7880FD70202EDD3A00B75473 /* TimerFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFlowLayout.swift; sourceTree = "<group>"; };
+		78A16F4A202EED3C0025F547 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		78A16F4B202EED3C0025F547 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		78A16F4F202EEE1A0025F547 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		78A16F54202EEE1C0025F547 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		78F67F1A20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingScheduleCollectionViewController.swift; sourceTree = "<group>"; };
 		78F67F1C20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningScheduleCollectionViewController.swift; sourceTree = "<group>"; };
 		78F67F1F2026150800FF87D5 /* HeaderCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollectionView.xib; sourceTree = "<group>"; };
@@ -98,6 +116,7 @@
 				78F67F1C20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift */,
 				78F67F1A20260B0800FF87D5 /* EditingScheduleCollectionViewController.swift */,
 				7868638420236C3B00FC7556 /* TimerCollectionViewController.swift */,
+				7880FD70202EDD3A00B75473 /* TimerFlowLayout.swift */,
 				780F71A42023949D0068BCD9 /* TimerCollectionViewCell.swift */,
 				780F71A52023949D0068BCD9 /* TimerCollectionViewCell.xib */,
 				78F67F1F2026150800FF87D5 /* HeaderCollectionView.xib */,
@@ -132,6 +151,17 @@
 			path = FavoriteScheduleCollection;
 			sourceTree = "<group>";
 		};
+		7860DD292029A24E0078C52A /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				7860DD2C2029A80A0078C52A /* CustomPageViewController.swift */,
+				7860DD2A2029A50A0078C52A /* TransparentNavigationController.swift */,
+				7860DD302029B0120078C52A /* RoundEdgeView.swift */,
+				7860DD322029F2310078C52A /* ViewControllerWithAutoAdjustingBackgroundViewToTopOfStatusBar.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		7868636520236C3A00FC7556 = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +183,10 @@
 		7868637020236C3B00FC7556 /* MyTimer */ = {
 			isa = PBXGroup;
 			children = (
-				78F88088202470470058005B /* Service */,
+				78A16F55202EEE1C0025F547 /* Localizable.strings */,
+				78A16F50202EEE1A0025F547 /* InfoPlist.strings */,
+				7880FD6D202EC2C600B75473 /* Managers */,
+				78F88088202470470058005B /* Services */,
 				78F880872024703F0058005B /* Model */,
 				78F8808020246E6F0058005B /* Presenters */,
 				78F8807F20246E4C0058005B /* Views */,
@@ -173,9 +206,19 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7880FD6D202EC2C600B75473 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				78F8808120246EA90058005B /* PresenterManager.swift */,
+				7880FD6E202EC2E500B75473 /* StoreManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		78F8807F20246E4C0058005B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7860DD292029A24E0078C52A /* Custom */,
 				78028DB82027221F00E51D30 /* PreparingScheduleView */,
 				78521FB520242C1E0038FBE9 /* TimerCreatorView */,
 				78521FB620242C390038FBE9 /* FavoriteScheduleCollection */,
@@ -189,7 +232,6 @@
 		78F8808020246E6F0058005B /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				78F8808120246EA90058005B /* PresenterManager.swift */,
 				78F8808520246F4A0058005B /* EditingSchedulePresenter.swift */,
 				78F70C932025F78100C01B38 /* RunningSchedulePresenter.swift */,
 				78F8808320246F1F0058005B /* FavoriteSchedulePresenter.swift */,
@@ -207,14 +249,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		78F88088202470470058005B /* Service */ = {
+		78F88088202470470058005B /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				78FDA61A2026295B0069E23C /* ScheduleService.swift */,
 				78028DBB2027221F00E51D30 /* TimerService.swift */,
 				78028DBD2027272600E51D30 /* SoundService.swift */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		C3B2D44EC6F15CF998958A84 /* Pods */ = {
@@ -302,8 +344,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				780F71A72023949D0068BCD9 /* TimerCollectionViewCell.xib in Resources */,
+				78A16F4E202EEE1A0025F547 /* InfoPlist.strings in Resources */,
 				78F67F212026150800FF87D5 /* HeaderCollectionView.xib in Resources */,
 				7868637C20236C3B00FC7556 /* LaunchScreen.storyboard in Resources */,
+				78A16F53202EEE1C0025F547 /* Localizable.strings in Resources */,
 				7868637920236C3B00FC7556 /* Assets.xcassets in Resources */,
 				7868637720236C3B00FC7556 /* Main.storyboard in Resources */,
 				78F67F272026156600FF87D5 /* FooterCollectionView.xib in Resources */,
@@ -375,8 +419,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				78028DBC2027221F00E51D30 /* TimerService.swift in Sources */,
+				7860DD2B2029A50A0078C52A /* TransparentNavigationController.swift in Sources */,
+				7880FD6F202EC2E500B75473 /* StoreManager.swift in Sources */,
 				780F71A62023949D0068BCD9 /* TimerCollectionViewCell.swift in Sources */,
 				78F8808220246EA90058005B /* PresenterManager.swift in Sources */,
+				7880FD71202EDD3A00B75473 /* TimerFlowLayout.swift in Sources */,
 				780F71A1202386CA0068BCD9 /* TimerPickerViewController.swift in Sources */,
 				78F67F1D20260DC100FF87D5 /* RunningScheduleCollectionViewController.swift in Sources */,
 				78028DB72027221F00E51D30 /* SaverSchedulePresenter.swift in Sources */,
@@ -386,12 +433,15 @@
 				7868637420236C3B00FC7556 /* TimerCreatorViewController.swift in Sources */,
 				78521FBB20242D220038FBE9 /* FavoriteCollectionViewCell.swift in Sources */,
 				78028DBE2027272600E51D30 /* SoundService.swift in Sources */,
+				7860DD332029F2310078C52A /* ViewControllerWithAutoAdjustingBackgroundViewToTopOfStatusBar.swift in Sources */,
 				78F8808420246F1F0058005B /* FavoriteSchedulePresenter.swift in Sources */,
+				7860DD2D2029A80A0078C52A /* CustomPageViewController.swift in Sources */,
 				78028DBA2027221F00E51D30 /* PreparingScheduleViewController.swift in Sources */,
 				78F8808620246F4A0058005B /* EditingSchedulePresenter.swift in Sources */,
 				78521FB820242C550038FBE9 /* FavoriteCollectionViewController.swift in Sources */,
 				78F8808A202470560058005B /* Schedule.swift in Sources */,
 				7868637220236C3B00FC7556 /* AppDelegate.swift in Sources */,
+				7860DD312029B0120078C52A /* RoundEdgeView.swift in Sources */,
 				78FDA61B2026295B0069E23C /* ScheduleService.swift in Sources */,
 				78F70C942025F78100C01B38 /* RunningSchedulePresenter.swift in Sources */,
 			);
@@ -404,6 +454,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				7868637620236C3B00FC7556 /* Base */,
+				78A16F4A202EED3C0025F547 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -412,8 +463,25 @@
 			isa = PBXVariantGroup;
 			children = (
 				7868637B20236C3B00FC7556 /* Base */,
+				78A16F4B202EED3C0025F547 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		78A16F50202EEE1A0025F547 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78A16F4F202EEE1A0025F547 /* ru */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		78A16F55202EEE1C0025F547 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78A16F54202EEE1C0025F547 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -423,6 +491,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -480,6 +549,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -536,7 +606,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JD6X7BWBF5;
 				INFOPLIST_FILE = MyTimer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.goloviznineldar.MyTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,7 +626,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JD6X7BWBF5;
 				INFOPLIST_FILE = MyTimer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.goloviznineldar.MyTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -33,6 +33,13 @@ class RunningScheduleCollectionViewController: TimerCollectionViewController {
 
 extension RunningScheduleCollectionViewController: RunningScheduleView {
     
+    func finish() {
+        if let preparingVC = self.parent as? PreparingScheduleViewController {
+            preparingVC.setStartTitle()
+        }
+    }
+    
+    
     func forceUpdate() {
         self.timers = presenter.timers
         collectionView?.reloadData()
@@ -45,8 +52,9 @@ extension RunningScheduleCollectionViewController: RunningScheduleView {
     
     func change(timer: Timer, atIndex: Int) {
         let toChangeIndexPath = IndexPath(row: atIndex, section: 0)
-        let cell = collectionView?.cellForItem(at: toChangeIndexPath) as! TimerCollectionViewCell
-        cell.timerLabel.text = timer.description
+        if let cell = collectionView?.cellForItem(at: toChangeIndexPath) as? TimerCollectionViewCell {
+            cell.timerLabel.text = timer.description
+        }
     }
     
 }
