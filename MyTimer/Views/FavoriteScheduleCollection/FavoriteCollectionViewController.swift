@@ -43,12 +43,40 @@ extension FavoriteCollectionViewController: FavoriteScheduleView {
     
     func forceUpdate() {
         self.schedules = presenter.schedules
+        if self.schedules.count == 0 {
+            addPlaceholder()
+        } else {
+            removePlaceholder()
+        }
         collectionView?.reloadData()
     }
     
     func deleteSchedule(atIndex index: Int) {
         self.schedules = presenter.schedules
+        if self.schedules.count == 0 {
+            addPlaceholder()
+        } else {
+            removePlaceholder()
+        }
         collectionView?.deleteItems(at: [IndexPath(row: index, section: 0)])
+    }
+    
+    private func addPlaceholder() {
+        guard self.collectionView?.backgroundView == nil else {
+            return
+        }
+        guard let backgroundView = UINib(nibName: "PlaceholderView", bundle: nil).instantiate(withOwner: self, options: nil).first as? UIView else {
+            return
+        }
+        self.collectionView?.backgroundView = backgroundView
+        backgroundView.alpha = 0
+        UIView.animate(withDuration: 0.5) {
+            backgroundView.alpha = 1
+        }
+    }
+    
+    private func removePlaceholder() {
+        self.collectionView?.backgroundView = nil
     }
     
 }
@@ -61,10 +89,7 @@ extension FavoriteCollectionViewController {
         guard let toDeleteIndexPath = collectionView?.indexPathForItem(at: gesture.location(in: collectionView)) else {
             return
         }
-        let cell = collectionView?.cellForItem(at: toDeleteIndexPath) as? FavoriteCollectionViewCell
-        if let title = cell?.title.text {
-            presenter.onScheduleDelete(withTitle: title, withIndex: toDeleteIndexPath.row)
-        }
+        presenter.onScheduleDelete(withIndex: toDeleteIndexPath.row)
     }
 
     // MARK: UICollectionViewDataSource

@@ -2,10 +2,10 @@
 "Cancel" = "Отмена";
 
 /* PreparingScheduleViewController */
-"Enter the title" = "Введите название";
+"Enter the title" = "Название";
 
 /* PreparingScheduleViewController */
-"How would you name it" = "Назовите таймер";
+"How would you name it" = "Придумайте название";
 
 /* PreparingScheduleViewController */
 "Save" = "Сохранить";

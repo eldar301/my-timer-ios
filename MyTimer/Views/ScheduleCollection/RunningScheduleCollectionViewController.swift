@@ -37,8 +37,7 @@ extension RunningScheduleCollectionViewController: RunningScheduleView {
         if let preparingVC = self.parent as? PreparingScheduleViewController {
             preparingVC.setStartTitle()
         }
-    }
-    
+    }    
     
     func forceUpdate() {
         self.timers = presenter.timers

@@ -1,17 +1,8 @@
 /* Class = "UINavigationItem"; title = "My Timer"; ObjectID = "1qx-cu-iLP"; */
 "1qx-cu-iLP.title" = "Мой Таймер";
 
-/* Class = "UITabBarItem"; title = "Favorites"; ObjectID = "LSo-fq-icB"; */
-"LSo-fq-icB.title" = "Избранное";
-
 /* Class = "UIButton"; normalTitle = "Start"; ObjectID = "N0x-NR-9Z3"; */
 "N0x-NR-9Z3.normalTitle" = "Старт";
-
-/* Class = "UINavigationItem"; title = "My Timer"; ObjectID = "WBX-pc-EDB"; */
-"WBX-pc-EDB.title" = "Мой Таймер";
-
-/* Class = "UITabBarItem"; title = "Add timer"; ObjectID = "WJs-Im-2kH"; */
-"WJs-Im-2kH.title" = "Добавить таймер";
 
 /* Class = "UILabel"; text = ":"; ObjectID = "hqN-hk-QXy"; */
 "hqN-hk-QXy.text" = ":";

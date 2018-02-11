@@ -5,9 +5,12 @@
       <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.0" build-num="9A235"/>
     </header>
     <body>
+      <trans-unit id="CFBundleDisplayName">
+        <source>My Timer</source>
+        <target>Мой Таймер</target>
+      </trans-unit>
       <trans-unit id="CFBundleName">
         <source>$(PRODUCT_NAME)</source>
-        <target>Мой Таймер</target>
       </trans-unit>
     </body>
   </file>
@@ -23,12 +26,12 @@
       </trans-unit>
       <trans-unit id="Enter the title">
         <source>Enter the title</source>
-        <target>Введите название</target>
+        <target>Название</target>
         <note>PreparingScheduleViewController</note>
       </trans-unit>
       <trans-unit id="How would you name it">
         <source>How would you name it</source>
-        <target>Назовите таймер</target>
+        <target>Введите название</target>
         <note>PreparingScheduleViewController</note>
       </trans-unit>
       <trans-unit id="Save">
@@ -38,7 +41,7 @@
       </trans-unit>
       <trans-unit id="Save timer">
         <source>Save timer</source>
-        <target>Сохранить таймер</target>
+        <target>Сохранить</target>
         <note>PreparingScheduleViewController</note>
       </trans-unit>
       <trans-unit id="Start">
@@ -69,30 +72,27 @@
         <target>Мой Таймер</target>
         <note>Class = "UINavigationItem"; title = "My Timer"; ObjectID = "1qx-cu-iLP";</note>
       </trans-unit>
-      <trans-unit id="LSo-fq-icB.title">
-        <source>Favorites</source>
-        <target>Избранное</target>
-        <note>Class = "UITabBarItem"; title = "Favorites"; ObjectID = "LSo-fq-icB";</note>
-      </trans-unit>
       <trans-unit id="N0x-NR-9Z3.normalTitle">
         <source>Start</source>
         <target>Старт</target>
         <note>Class = "UIButton"; normalTitle = "Start"; ObjectID = "N0x-NR-9Z3";</note>
       </trans-unit>
-      <trans-unit id="WBX-pc-EDB.title">
-        <source>My Timer</source>
-        <target>Мой Таймер</target>
-        <note>Class = "UINavigationItem"; title = "My Timer"; ObjectID = "WBX-pc-EDB";</note>
-      </trans-unit>
-      <trans-unit id="WJs-Im-2kH.title">
-        <source>Add timer</source>
-        <target>Добавить таймер</target>
-        <note>Class = "UITabBarItem"; title = "Add timer"; ObjectID = "WJs-Im-2kH";</note>
-      </trans-unit>
       <trans-unit id="hqN-hk-QXy.text">
         <source>:</source>
         <target>:</target>
         <note>Class = "UILabel"; text = ":"; ObjectID = "hqN-hk-QXy";</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="MyTimer/Views/FavoriteScheduleCollection/Base.lproj/PlaceholderView.xib" source-language="en" datatype="plaintext" target-language="ru">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="9.0" build-num="9A235"/>
+    </header>
+    <body>
+      <trans-unit id="f2l-3A-Ci6.text">
+        <source>There are no added timers</source>
+        <target>Нет добавленных таймеров</target>
+        <note>Class = "UILabel"; text = "There are no added timers"; ObjectID = "f2l-3A-Ci6";</note>
       </trans-unit>
     </body>
   </file>

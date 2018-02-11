@@ -50,7 +50,7 @@ class EditingSchedulePresenterDefault: EditingSchedulePresenter {
         timer.minutes = minutes
         timer.seconds = seconds
         schedule.timers.append(timer)
-        scheduleView?.addTimer(timer: schedule.timers.last!, atIndex: schedule.timers.count - 1)
+        scheduleView?.addTimer(timer: timer, atIndex: schedule.timers.count - 1)
     }
     
     func onTimerDelete(atIndex index: Int) {

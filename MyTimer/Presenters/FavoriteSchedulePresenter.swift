@@ -18,7 +18,7 @@ protocol FavoriteSchedulePresenter {
     var schedules: [String] { get set }
     func onViewDidAppear()
     func onSchedulePick(withTitle: String)
-    func onScheduleDelete(withTitle: String, withIndex: Int)
+    func onScheduleDelete(withIndex: Int)
 }
 
 class FavoriteSchedulePresenterDefault: FavoriteSchedulePresenter {
@@ -42,9 +42,9 @@ class FavoriteSchedulePresenterDefault: FavoriteSchedulePresenter {
         ScheduleService.instance.actualSchedule = schedule
     }
     
-    func onScheduleDelete(withTitle title: String, withIndex index: Int) {
-        ScheduleService.instance.delete(withTitle: title)
-        self.schedules.remove(at: index)
+    func onScheduleDelete(withIndex index: Int) {
+        let deletedScheduleTitle = schedules.remove(at: index)
+        ScheduleService.instance.delete(withTitle: deletedScheduleTitle)
         favoriteScheduleView?.deleteSchedule(atIndex: index)
     }
     
