@@ -23,7 +23,7 @@ protocol FavoriteSchedulePresenter {
 
 class FavoriteSchedulePresenterDefault: FavoriteSchedulePresenter {
     
-    var favoriteScheduleView: FavoriteScheduleView?
+    weak var favoriteScheduleView: FavoriteScheduleView?
     
     var schedules: [String] = []
     

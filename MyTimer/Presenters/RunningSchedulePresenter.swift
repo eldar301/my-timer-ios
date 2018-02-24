@@ -30,7 +30,7 @@ class RunningSchedulePresenterDefault: RunningSchedulePresenter {
     private var soundService = SoundService()
     private var running: Bool = false
     
-    var runningScheduleView: RunningScheduleView?
+    weak var runningScheduleView: RunningScheduleView?
     
     var timers: [Timer] {
         return Array(schedule.timers)
@@ -49,25 +49,39 @@ class RunningSchedulePresenterDefault: RunningSchedulePresenter {
     
     func onStartPressed() {
         if let firstTimer = schedule.timers.first, !running {
-            running = true
-            soundService.doSound()
-            timerService.callback = self
-            timerService.run(withTimer: firstTimer)
+            startTimer(withTimer: firstTimer)
+            runningScheduleView?.change(timer: firstTimer, atIndex: 0)
         } else {
             runningScheduleView?.finish()
         }
     }
     
     func onStopPressed() {
-        running = false
-        timerService.callback = nil
-        timerService.stop()
+        stopTimer()
         reloadSchedule()
     }
     
     private func reloadSchedule() {
         schedule = ScheduleService.instance.safeCopyActualSchedule
         runningScheduleView?.forceUpdate()
+    }
+    
+}
+
+private extension RunningSchedulePresenterDefault {
+    
+    func startTimer(withTimer timer: Timer) {
+        running = true
+        soundService.doSound()
+        _ = timer.decreaseBySecond()
+        timerService.callback = self
+        timerService.run(withTimer: timer)
+    }
+    
+    func stopTimer() {
+        running = false
+        timerService.callback = nil
+        timerService.stop()
     }
     
 }
@@ -79,14 +93,14 @@ extension RunningSchedulePresenterDefault: TimerServiceCallback {
     }
     
     func timerFinished() {
-        soundService.doSound()
         schedule.timers.removeFirst()
         runningScheduleView?.deleteTimer(atIndex: 0)
         if let nextTimer = schedule.timers.first {
-            timerService.run(withTimer: nextTimer)
+            startTimer(withTimer: nextTimer)
+            runningScheduleView?.change(timer: nextTimer, atIndex: 0)
         } else {
-            running = false
-            timerService.callback = nil
+            stopTimer()
+            soundService.doSound()
             runningScheduleView?.finish()
             reloadSchedule()
         }

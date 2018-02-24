@@ -15,7 +15,7 @@ protocol SaverSchedulePresenter {
 class SaverSchedulePresenterDefault: SaverSchedulePresenter {
     
     func save(withTitle title: String) {
-        guard title != "" else {
+        guard !title.isEmpty else {
             return
         }
         let schedule = ScheduleService.instance.actualSchedule

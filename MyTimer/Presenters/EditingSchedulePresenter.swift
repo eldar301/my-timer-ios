@@ -35,7 +35,7 @@ class EditingSchedulePresenterDefault: EditingSchedulePresenter {
         return Array(schedule.timers)
     }
     
-    var scheduleView: EditingScheduleView?
+    weak var scheduleView: EditingScheduleView?
     
     func onViewDidAppear() {
         schedule = ScheduleService.instance.actualSchedule

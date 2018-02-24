@@ -21,6 +21,5 @@ class PresenterManager {
     lazy var favoriteSchedulePresenter: FavoriteSchedulePresenter = FavoriteSchedulePresenterDefault()
     lazy var timerPickerPresenter: TimerPickerPresenter = TimerPickerPresenterDefault()
     lazy var saverPresenter: SaverSchedulePresenter = SaverSchedulePresenterDefault()
-
     
 }
